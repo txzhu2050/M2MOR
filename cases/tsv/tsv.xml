@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<Structure Name="SYSTEM" LengthUnit="m">
+    <Location OffsetX="0" OffsetY="0" Orientation="R0"/>
+    <Shape Name="1" Type="box" FillingMaterial="Si" PowerOn="False">
+        <Geometry Length="30e-6" Width="30e-6" Height="100e-6" OriginXYZ="(0.0,0.0,0.0)"/>
+    </Shape>
+    <Shape Name="2" Type="cylinder" FillingMaterial="Diel" PowerOn="False">
+        <Geometry Radius="11e-6" Height="100e-6" OriginXYZ="(15e-6,15e-6,0.0)"/>
+    </Shape>
+    <Shape Name="3" Type="cylinder" FillingMaterial="Cu" PowerOn="True">
+        <Geometry Radius="10e-6" Height="10e-6" OriginXYZ="(15e-6,15e-6,0.0)"/>
+    </Shape>
+</Structure>

@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<Structure Name="SYSTEM" LengthUnit="m">
+    <Location OffsetX="0" OffsetY="0" Orientation="R0"/>
+    <Shape Name="1" Type="box" FillingMaterial="Underfill" PowerOn="False">
+        <Geometry Length="150e-6" Width="150e-6" Height="100e-6" OriginXYZ="(0.0,0.0,-100e-6)"/>
+    </Shape>
+    <Shape Name="3" Type="box" FillingMaterial="Diel" PowerOn="False">
+        <Geometry Length="150e-6" Width="150e-6" Height="5e-6" OriginXYZ="(0.0,0.0,0.0)"/>
+    </Shape>
+</Structure>
