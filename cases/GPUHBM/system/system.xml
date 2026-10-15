@@ -1,0 +1,190 @@
+<?xml version="1.0" ?>
+<Package name="GPUHBMSYSTEM" lengthunit="m">
+    <Location offsetX="0" offsetY="0" orientation="R0"/>
+    <MaterialLib File="./material.config"/>
+    <TempData Temperature="298.15"/>
+    <Component number="1" type="Bulk">
+        <Geometry Length="0.065" Width="0.065" XYorigin="Center"/>
+        <Layer name="Substrate" FillingMaterial="Laminate">
+            <Geometry Thickness="300e-6"/>
+        </Layer>
+    </Component>
+    <Component number="2" type="Bulk">
+        <Geometry Length="0.044" Width="0.038" XYorigin="Center"/>
+        <Layer name="C4bump" FillingMaterial="C4bump">
+            <Geometry Thickness="105e-6"/>
+        </Layer>
+        <Layer name="Interposer" FillingMaterial="Si">
+            <Geometry Thickness="100e-6"/>
+        </Layer>
+    </Component>
+    <Component number="3" type="Active" FillingMaterial="Epoxy">
+        <Geometry Length="0.044" Width="0.038" XYorigin="Origin"/>
+        <Chiplet name="GPU" FillingMaterial="Si">
+            <Geometry Length="25.5e-3" Width="32e-3" XYorigin="(0.00925,0.003)"/>
+            <Layer name="GPU_mbump" FillingMaterial="mbump">
+                <Geometry Thickness="30e-6"/>
+            </Layer>
+            <Layer name="GPU_FEOL" FillingMaterial="FEOL">
+                <Geometry Thickness="1e-6"/>
+                <Floorplan Type="Macro" File="./flp/GPU.csv"/>
+                <Power File="./power/GPU.csv" />
+            </Layer>
+            <Layer name="GPU_Carrier" FillingMaterial="Si">
+                <Geometry Thickness="400e-6"/>
+            </Layer>
+        </Chiplet>
+        <Chiplet name="HBM1" FillingMaterial="Si">
+            <Geometry Length="7.56e-3" Width="11.49e-3" XYorigin="(0.0015,0.003)"/>
+            <Layer name="HBM1_mbump" FillingMaterial="mbump">
+                <Geometry Thickness="30e-6"/>
+            </Layer>
+            <Layer name="HBM1_Die1" FillingMaterial="Si">
+                <Geometry Thickness="100e-6"/>
+                <Floorplan Type="Macro" File="./flp/HBM1_Die1.csv"/>
+                <Power File="./power/HBM1_Die1.csv" />
+            </Layer>
+            <Layer name="HBM1_HB1" FillingMaterial="HB">
+                <Geometry Thickness="4e-6"/>
+            </Layer>
+            <Layer name="HBM1_Die2" FillingMaterial="Si">
+                <Geometry Thickness="100e-6"/>
+                <Floorplan Type="Macro" File="./flp/HBM1_Die2.csv"/>
+                <Power File="./power/HBM1_Die2.csv" />
+            </Layer>
+            <Layer name="HBM1_HB2" FillingMaterial="HB">
+                <Geometry Thickness="4e-6"/>
+            </Layer>
+            <Layer name="HBM1_Die3" FillingMaterial="Si">
+                <Geometry Thickness="100e-6"/>
+                <Floorplan Type="Macro" File="./flp/HBM1_Die3.csv"/>
+                <Power File="./power/HBM1_Die3.csv" />
+            </Layer>
+            <Layer name="HBM1_HB3" FillingMaterial="HB">
+                <Geometry Thickness="4e-6"/>
+            </Layer>
+            <Layer name="HBM1_Die4" FillingMaterial="Si">
+                <Geometry Thickness="100e-6"/>
+                <Floorplan Type="Macro" File="./flp/HBM1_Die4.csv"/>
+                <Power File="./power/HBM1_Die4.csv" />
+            </Layer>
+        </Chiplet>
+        <Chiplet name="HBM2" FillingMaterial="Si">
+            <Geometry Length="7.56e-3" Width="11.49e-3" XYorigin="(0.03494,0.003)"/>
+            <Layer name="HBM2_mbump" FillingMaterial="mbump">
+                <Geometry Thickness="30e-6"/>
+            </Layer>
+            <Layer name="HBM2_Die1" FillingMaterial="Si">
+                <Geometry Thickness="100e-6"/>
+                <Floorplan Type="Macro" File="./flp/HBM2_Die1.csv"/>
+                <Power File="./power/HBM2_Die1.csv" />
+            </Layer>
+            <Layer name="HBM2_HB1" FillingMaterial="HB">
+                <Geometry Thickness="4e-6"/>
+            </Layer>
+            <Layer name="HBM2_Die2" FillingMaterial="Si">
+                <Geometry Thickness="100e-6"/>
+                <Floorplan Type="Macro" File="./flp/HBM2_Die2.csv"/>
+                <Power File="./power/HBM2_Die2.csv" />
+            </Layer>
+            <Layer name="HBM2_HB2" FillingMaterial="HB">
+                <Geometry Thickness="4e-6"/>
+            </Layer>
+            <Layer name="HBM2_Die3" FillingMaterial="Si">
+                <Geometry Thickness="100e-6"/>
+                <Floorplan Type="Macro" File="./flp/HBM2_Die3.csv"/>
+                <Power File="./power/HBM2_Die3.csv" />
+            </Layer>
+            <Layer name="HBM2_HB3" FillingMaterial="HB">
+                <Geometry Thickness="4e-6"/>
+            </Layer>
+            <Layer name="HBM2_Die4" FillingMaterial="Si">
+                <Geometry Thickness="100e-6"/>
+                <Floorplan Type="Macro" File="./flp/HBM2_Die4.csv"/>
+                <Power File="./power/HBM2_Die4.csv" />
+            </Layer>
+        </Chiplet>
+        <Chiplet name="HBM3" FillingMaterial="Si">
+            <Geometry Length="7.56e-3" Width="11.49e-3" XYorigin="(0.0015,0.02351)"/>
+            <Layer name="HBM3_mbump" FillingMaterial="mbump">
+                <Geometry Thickness="30e-6"/>
+            </Layer>
+            <Layer name="HBM3_Die1" FillingMaterial="Si">
+                <Geometry Thickness="100e-6"/>
+                <Floorplan Type="Macro" File="./flp/HBM3_Die1.csv"/>
+                <Power File="./power/HBM3_Die1.csv" />
+            </Layer>
+            <Layer name="HBM3_HB1" FillingMaterial="HB">
+                <Geometry Thickness="4e-6"/>
+            </Layer>
+            <Layer name="HBM3_Die2" FillingMaterial="Si">
+                <Geometry Thickness="100e-6"/>
+                <Floorplan Type="Macro" File="./flp/HBM3_Die2.csv"/>
+                <Power File="./power/HBM3_Die2.csv" />
+            </Layer>
+            <Layer name="HBM3_HB2" FillingMaterial="HB">
+                <Geometry Thickness="4e-6"/>
+            </Layer>
+            <Layer name="HBM3_Die3" FillingMaterial="Si">
+                <Geometry Thickness="100e-6"/>
+                <Floorplan Type="Macro" File="./flp/HBM3_Die3.csv"/>
+                <Power File="./power/HBM3_Die3.csv" />
+            </Layer>
+            <Layer name="HBM3_HB3" FillingMaterial="HB">
+                <Geometry Thickness="4e-6"/>
+            </Layer>
+            <Layer name="HBM3_Die4" FillingMaterial="Si">
+                <Geometry Thickness="100e-6"/>
+                <Floorplan Type="Macro" File="./flp/HBM3_Die4.csv"/>
+                <Power File="./power/HBM3_Die4.csv" />
+            </Layer>
+        </Chiplet>
+        <Chiplet name="HBM4" FillingMaterial="Si">
+            <Geometry Length="7.56e-3" Width="11.49e-3" XYorigin="(0.03494,0.02351)"/>
+            <Layer name="HBM4_mbump" FillingMaterial="mbump">
+                <Geometry Thickness="30e-6"/>
+            </Layer>
+            <Layer name="HBM4_Die1" FillingMaterial="Si">
+                <Geometry Thickness="100e-6"/>
+                <Floorplan Type="Macro" File="./flp/HBM4_Die1.csv"/>
+                <Power File="./power/HBM4_Die1.csv" />
+            </Layer>
+            <Layer name="HBM4_HB1" FillingMaterial="HB">
+                <Geometry Thickness="4e-6"/>
+            </Layer>
+            <Layer name="HBM4_Die2" FillingMaterial="Si">
+                <Geometry Thickness="100e-6"/>
+                <Floorplan Type="Macro" File="./flp/HBM4_Die2.csv"/>
+                <Power File="./power/HBM4_Die2.csv" />
+            </Layer>
+            <Layer name="HBM4_HB2" FillingMaterial="HB">
+                <Geometry Thickness="4e-6"/>
+            </Layer>
+            <Layer name="HBM4_Die3" FillingMaterial="Si">
+                <Geometry Thickness="100e-6"/>
+                <Floorplan Type="Macro" File="./flp/HBM4_Die3.csv"/>
+                <Power File="./power/HBM4_Die3.csv" />
+            </Layer>
+            <Layer name="HBM4_HB3" FillingMaterial="HB">
+                <Geometry Thickness="4e-6"/>
+            </Layer>
+            <Layer name="HBM4_Die4" FillingMaterial="Si">
+                <Geometry Thickness="100e-6"/>
+                <Floorplan Type="Macro" File="./flp/HBM4_Die4.csv"/>
+                <Power File="./power/HBM4_Die4.csv" />
+            </Layer>
+        </Chiplet>
+    </Component>
+    <Component number="4" type="Bulk">
+        <Geometry Length="0.044" Width="0.038" XYorigin="Center"/>
+        <Layer name="TIM" FillingMaterial="TIM">
+            <Geometry Thickness="200e-6"/>
+        </Layer>
+    </Component>
+    <Component number="5" type="Bulk">
+        <Geometry Length="0.080" Width="0.080" XYorigin="Center"/>
+        <Layer name="Lid" FillingMaterial="Cu">
+            <Geometry Thickness="3000e-6"/>
+        </Layer>
+    </Component>
+</Package>

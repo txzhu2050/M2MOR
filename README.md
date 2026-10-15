@@ -18,6 +18,7 @@ M2MOR/
 │   ├── mbump/            # Micro-bump example
 │   ├── c4bump/           # C4-bump example
 │   ├── hbt/              # Hybrid-bonding example
+│   ├── GPUHBM/           # GPU-HBM system example
 │   └── generate_flp.py   # Floorplan-generation script
 └── README.md
 ```

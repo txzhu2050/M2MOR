@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<Structure Name="SYSTEM" LengthUnit="m">
+    <Location OffsetX="0" OffsetY="0" Orientation="R0"/>
+    <MeshSize Size="4e-6"/>
+    <Shape Name="1" Type="box" FillingMaterial="Si" PowerOn="False">
+        <Geometry Length="30e-6" Width="30e-6" Height="100e-6" OriginXYZ="(0.0,0.0,0.0)"/>
+    </Shape>
+</Structure>
